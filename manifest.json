@@ -1,9 +1,9 @@
 {
-  "name": "UnPdf .govt.nz",
+  "name": "Parliament++",
   "version": "1.0",
-  "description": "Subsitute a google docs viewer link for any pdf link on parliament.nz or a .govt.nz site",
+  "description": "Improve the user experience on NZ government sites.",
   "content_scripts": [{
     "matches": ["http://www.parliament.nz/*", "http://*.govt.nz/*"],
-    "js": ["jquery.js", "unpdf.js"]
+    "js": ["jquery.js", "parliament-plus.js"]
   }]
 }
