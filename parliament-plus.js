@@ -1,13 +1,13 @@
 (function($, undefined) {
 
+  var doc = $(document),
+      width = doc.width();
+
+  if (width >= 1280) {
+    $('body').addClass('wide');
+  }
   $(document).ready(function() {
 
-    var doc = $(document),
-        width = doc.width();
-
-    if (width >= 1280) {
-      $('body').addClass('wide');
-    }
     $('a[href*=.pdf]:has(cite)').addClass('google-pdf').each(function() {
       var $this = $(this),
         iframe,

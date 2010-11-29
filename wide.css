@@ -1,0 +1,19 @@
+.wide #master, .wide .headerLinks, .wide #mainContent {
+  width: 1140px;
+}
+
+.wide #header {
+  width: 1140px;
+  margin: 0 auto 1px;
+}
+
+.wide #topLinks, .wide .footerLinks, .wide #content {
+  width: 1140px;
+}
+
+.wide #mainContent {
+  background: none;
+}
+
+.wide .contentBody {
+}
