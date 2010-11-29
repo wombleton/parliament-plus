@@ -1,5 +1,13 @@
 (function($, undefined) {
+
   $(document).ready(function() {
+
+    var doc = $(document),
+        width = doc.width();
+
+    if (width >= 1280) {
+      $('body').addClass('wide');
+    }
     $('a[href*=.pdf]:has(cite)').addClass('google-pdf').each(function() {
       var $this = $(this),
         iframe,
@@ -26,5 +34,18 @@
         iframe.appendTo('.copy .section:first');
       }
     });
+
+    $('div.answer').each(function() {
+      var $this = $(this),
+          re = /((?:QWA )?(\d+) \((\d{4})\))/g,
+          text = $this.html(),
+          match = text.match(re);
+
+      if (match) {
+        $this.html(text.replace(re, '<a href="http://www.parliament.nz/en-NZ/?document=QWA_$2_$3">$1</a>'));
+      }
+    });
+
   });
+
 }(jQuery));
