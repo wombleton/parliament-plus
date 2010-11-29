@@ -1,4 +1,4 @@
-.wide #master, .wide .headerLinks, .wide #mainContent {
+.wide #master, .wide .headerLinks {
   width: 1140px;
 }
 
@@ -7,13 +7,19 @@
   margin: 0 auto 1px;
 }
 
-.wide #topLinks, .wide .footerLinks, .wide #content {
+.wide #topLinks, .wide .footerLinks {
   width: 1140px;
+}
+
+.wide #topLinks div {
+  width: 261px;
+}
+
+.wide #content {
+  width: 989px;
 }
 
 .wide #mainContent {
   background: none;
-}
-
-.wide .contentBody {
+  width: 1140px;
 }
