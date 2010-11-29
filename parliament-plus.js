@@ -10,14 +10,18 @@
   var doc = $(document),
       width = doc.width(),
       l = window.location,
+      locationMatch,
       locale = (l.pathname.match(/$\/([^\/])\/.+/) || [])[1] || 'en-NZ',
-      QWA_RE = new RegExp(locale + '.+/QOA/.+/([^/]+_[0-9]+_[0-9]+).+$'),
-      QOA_RE = new RegExp(locale + '.+/QWA/.+/([^/]+_[0-9]+_[0-9]+).+$');
+      LINK_RE = new RegExp(locale + '/.+/([^/]+_[^/]+_[0-9]+)[^/]+$');
 
   if (width >= 1280) {
     $('body').addClass('wide');
   }
   $(document).ready(function() {
+    locationMatch = l.pathname.match(LINK_RE);
+    if (locationMatch) {
+      $('.section:first h1').append(generateLink(locationMatch[1], '#'));
+    }
 
     $('a[href*=.pdf]:has(cite)').each(function() {
       var $this = $(this),
@@ -50,7 +54,7 @@
       var $this = $(this),
           href = $this.attr('href') || '',
           key,
-          match = href.match(QOA_RE) || href.match(QWA_RE);
+          match = href.match(LINK_RE);
 
       if (match) {
         key = match[1];
