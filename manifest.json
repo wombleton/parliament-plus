@@ -1,10 +1,16 @@
 {
-  "name": "Parliament Goggles",
-  "version": "1.0",
-  "description": "Improve the user experience on NZ government sites.",
+  "name": "Nicer Parliament",
+  "version": "1.0.1",
+  "description": "Improve the user experience on the www.parliament.nz site.",
   "content_scripts": [{
     "matches": ["http://www.parliament.nz/*"],
-    "js": ["jquery.js", "parliament-plus.js"],
-    "css": ["wide.css"]
-  }]
+    "js": ["jquery.js", "nicer.js"],
+    "css": ["nicer.css"]
+  }],
+  "permissions": ["experimental"],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
 }
