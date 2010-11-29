@@ -1,9 +1,10 @@
 {
-  "name": "Parliament++",
+  "name": "Parliament Goggles",
   "version": "1.0",
   "description": "Improve the user experience on NZ government sites.",
   "content_scripts": [{
-    "matches": ["http://www.parliament.nz/*", "http://*.govt.nz/*"],
-    "js": ["jquery.js", "parliament-plus.js"]
+    "matches": ["http://www.parliament.nz/*"],
+    "js": ["jquery.js", "parliament-plus.js"],
+    "css": ["wide.css"]
   }]
 }
