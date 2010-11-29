@@ -23,3 +23,15 @@
   background: none;
   width: 1140px;
 }
+
+.wide .boxTwoCol .leftCol, .wide .boxTwoCol .rightCol {
+  width: 475px;
+}
+
+.wide .boxTwoCol .listBox {
+  width: 465px;
+}
+
+.wide .boxTwoCol .listing {
+  width: 437px;
+}
